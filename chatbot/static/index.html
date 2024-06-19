@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qentelli Chat Assistant</title>
+    <link rel="stylesheet" href="C:\Users\eswar.melam\OneDrive - Qentelli\Desktop\main_samp\Backend\chatbot\static\styles.css">
+</head>
+<body>
+    <!-- Qentelli Web Page -->
+    <div id="qentelli-web-page">
+        <video autoplay muted loop id="video-bg">
+            <source src="C:\Users\eswar.melam\OneDrive - Qentelli\Desktop\main_samp\Backend\static\Qentelli_MP3.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Chat Assistant Icon -->
+    <div id="chat-assistant-icon" onclick="toggleChatWindow()">
+        <img src="C:\Users\eswar.melam\OneDrive - Qentelli\Desktop\main_samp\Backend\static\chat-icon.png" alt="Chat Assistant Icon">
+    </div>
+
+    <!-- Chat Window -->
+    <div id="chat-window" class="hidden">
+        <div id="upload-buttons-container">
+            <button id="upload-url-btn" onclick="showUrlInput()">Upload URL</button>
+            <button id="upload-pdf-btn" onclick="triggerFileUpload()">Upload PDF</button>
+        </div>
+        <div id="ai-bot">
+            <img src="C:\Users\eswar.melam\OneDrive - Qentelli\Desktop\main_samp\Backend\static\ai-bot.gif" alt="AI Bot Image">
+        </div>
+        <div id="chat-messages"></div>
+        <input type="text" id="user-input" placeholder="Type your message..." onkeypress="handleUserInput(event)">
+        <input type="file" id="file-upload" style="display: none;" accept=".pdf" onchange="handleFileUpload(event)">
+        <input type="text" id="url-input" placeholder="Enter URL..." style="display: none;" onkeypress="handleUrlInput(event)">
+    </div>
+
+    <!-- Script for chat functionality -->
+    <script src="C:\Users\eswar.melam\OneDrive - Qentelli\Desktop\main_samp\Backend\static\script.js"></script>
+</body>
+</html>
